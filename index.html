@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>VillageLink · La caisse de votre association, visible par tous</title>
 <meta name="description" content="VillageLink aide les associations de ressortissants à gérer les cotisations, les dépenses et les projets du village. Chaque franc est visible par tous les membres, depuis le téléphone.">
-<meta name="theme-color" content="#08163A">
+<meta name="theme-color" content="#1B3A8C">
 <meta property="og:title" content="VillageLink · La caisse de votre association, visible par tous">
 <meta property="og:description" content="Cotisations, reçus WhatsApp, dépenses validées, projets du village : tout le monde voit où va l'argent.">
 <meta property="og:image" content="https://villagelinkafrica.com/icon-192.png">
@@ -14,108 +14,114 @@
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <style>
-:root{--ink:#fff;--muted:#B8C7EE;--gold:#F4C25B;--line:rgba(255,255,255,.16);--glass:rgba(255,255,255,.08);--gold-grad:linear-gradient(135deg,#FFD98A,#F4C25B 50%,#E9A93A)}
+/* VillageLink v2 : une seule couleur de marque (bleu), fond clair, aucun dégradé ni flou */
+:root{--primary:#1B3A8C;--primary-hover:#16307A;--soft:#E9EEF9;--bg:#F5F6F8;--surface:#fff;--ink:#14161B;--ink2:#454C5B;--muted:#5B6373;--line:#D9DDE5;--ok:#14663A;--ok-bg:#E3F3E9;--warn:#8A4A00;--warn-bg:#FDEDD3;--bad:#B3261E}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Poppins,system-ui,sans-serif;color:var(--ink);background:#08163A;line-height:1.55;-webkit-font-smoothing:antialiased}
-body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 92% 0%,rgba(110,150,255,.42),transparent 38%),radial-gradient(circle at -10% 45%,rgba(80,120,230,.28),transparent 42%),radial-gradient(circle at 70% 75%,rgba(244,194,91,.08),transparent 30%),linear-gradient(170deg,#08163A 0%,#122961 55%,#1E4088 100%)}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased;font-size:16px}
 a{color:inherit}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-.glass{background:var(--glass);border:1px solid var(--line);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);box-shadow:0 14px 34px rgba(2,8,30,.3),inset 0 1px 0 rgba(255,255,255,.12)}
-header{position:sticky;top:0;z-index:5;background:rgba(8,22,58,.7);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;height:64px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:18px}
-.brand img{width:36px;height:36px;border-radius:10px}
-.nav nav{display:flex;align-items:center;gap:22px;font-size:14px;color:var(--muted)}
+.glass{background:var(--surface);border:1px solid var(--line)}
+header{position:sticky;top:0;z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:700;font-size:19px}
+.brand img{width:40px;height:40px;border-radius:10px}
+.nav nav{display:flex;align-items:center;gap:24px;font-size:15px;color:var(--ink2);font-weight:500}
 .nav nav a{text-decoration:none}
-.nav nav a:hover{color:#fff}
+.nav nav a:hover{color:var(--primary)}
 @media (max-width:720px){.nav nav .hide-m{display:none}}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:16px;padding:13px 20px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid transparent;min-height:48px}
-.btn.gold{background:var(--gold-grad);color:#08163A;font-weight:700;box-shadow:0 10px 26px rgba(244,194,91,.35),inset 0 1px 0 rgba(255,255,255,.45)}
-.btn.ghost{background:var(--glass);border-color:var(--line);color:#fff}
-.btn.sm{min-height:40px;padding:8px 14px;font-size:13.5px;border-radius:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;padding:0 22px;font-weight:600;font-size:17px;text-decoration:none;border:2px solid transparent;min-height:52px;line-height:1.15;text-align:center}
+.btn.gold{background:var(--primary);color:#fff}
+.btn.gold:hover{background:var(--primary-hover)}
+.btn.ghost{background:var(--surface);border-color:var(--primary);color:var(--primary)}
+.btn.ghost:hover{background:var(--soft)}
+.btn.sm{min-height:48px;padding:0 16px;font-size:15px}
 /* hero */
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:56px 0 40px}
 @media (max-width:860px){.hero{grid-template-columns:1fr;padding-top:36px}}
-.tag{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:var(--gold);background:rgba(244,194,91,.12);border:1px solid rgba(244,194,91,.3);border-radius:999px;padding:5px 12px}
-h1{font-size:clamp(32px,6vw,52px);line-height:1.08;letter-spacing:-.02em;margin:16px 0 14px;font-weight:700;text-wrap:balance}
-h1 em{font-style:normal;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{font-size:17px;color:#D3DDF7;max-width:560px;margin:0 0 24px}
-.ctas{display:flex;flex-wrap:wrap;gap:10px}
-.proof{display:flex;flex-wrap:wrap;gap:18px;margin-top:22px;font-size:13px;color:var(--muted)}
-.proof span::before{content:"✓ ";color:var(--gold);font-weight:700}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--primary);background:var(--soft);border-radius:999px;padding:6px 14px}
+h1{font-size:clamp(32px,6vw,52px);line-height:1.1;letter-spacing:-.02em;margin:16px 0 14px;font-weight:700;text-wrap:balance}
+h1 em{font-style:normal;color:var(--primary)}
+.lead{font-size:18px;color:var(--ink2);max-width:560px;margin:0 0 24px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.proof{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:15px;color:var(--muted)}
+.proof span::before{content:"✓ ";color:var(--ok);font-weight:700}
 /* téléphone */
-.phone{width:min(320px,86vw);margin:0 auto;border-radius:38px;padding:12px;background:linear-gradient(160deg,rgba(255,255,255,.18),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.2);box-shadow:0 40px 80px rgba(2,8,30,.55)}
-.screen{border-radius:28px;overflow:hidden;background:radial-gradient(circle at 90% 0%,rgba(110,150,255,.4),transparent 45%),linear-gradient(170deg,#08163A,#122961 60%,#1E4088);padding:16px 14px 14px;display:flex;flex-direction:column;gap:12px}
-.s-head{display:flex;align-items:center;gap:10px;font-size:12px}
-.s-head i{width:34px;height:34px;border-radius:11px;background:#17336F;border:2px solid #F4C25B;display:grid;place-items:center;font-style:normal;font-weight:700}
-.s-head b{display:block;font-size:13px}
-.s-card{border-radius:20px;padding:14px;background:linear-gradient(135deg,rgba(255,255,255,.22),rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.24)}
-.s-card small{color:#D3DDF7;font-size:11px}
-.s-big{font-size:28px;font-weight:700;letter-spacing:-.02em;line-height:1.2}
-.s-big span{font-size:12px;font-weight:500;color:#D3DDF7}
-.s-pill{display:inline-block;font-size:11px;font-weight:600;color:#86EBBB;background:rgba(73,201,140,.2);border-radius:999px;padding:2px 8px}
-.s-acts{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;text-align:center;font-size:10px}
-.s-acts div i{display:grid;place-items:center;width:42px;height:42px;margin:0 auto 4px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid var(--line);font-style:normal;font-size:18px}
-.s-acts div:first-child i{background:var(--gold-grad);color:#08163A;font-weight:700}
-.s-sheet{background:#EEF2FD;color:#0D1B44;border-radius:18px;padding:10px 12px;font-size:12px}
-.s-row{display:flex;align-items:center;gap:8px;padding:6px 0;border-top:1px solid #DFE6F8}
+.phone{width:min(320px,86vw);margin:0 auto;border-radius:40px;padding:8px;background:#0F1420}
+.screen{border-radius:32px;overflow:hidden;background:var(--bg);padding:16px 14px 14px;display:flex;flex-direction:column;gap:12px;color:var(--ink)}
+.s-head{display:flex;align-items:center;gap:10px;font-size:13px}
+.s-head i{width:36px;height:36px;border-radius:10px;background:var(--primary);color:#fff;display:grid;place-items:center;font-style:normal;font-weight:700}
+.s-head b{display:block;font-size:14px}
+.s-head span{color:var(--muted)}
+.s-card{border-radius:16px;padding:14px;background:var(--primary);color:#fff}
+.s-card small{color:#fff;opacity:.92;font-size:12px}
+.s-big{font-size:30px;font-weight:700;letter-spacing:-.01em;line-height:1.2}
+.s-big span{font-size:13px;font-weight:600;opacity:.9}
+.s-pill{display:inline-block;font-size:12px;font-weight:600;color:var(--ok);background:var(--ok-bg);border-radius:999px;padding:2px 8px}
+.s-acts{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;text-align:center;font-size:11px;font-weight:600;color:var(--primary)}
+.s-acts div i{display:grid;place-items:center;width:100%;height:46px;margin:0 auto 4px;border-radius:12px;background:var(--surface);border:1px solid var(--line);font-style:normal;font-size:18px}
+.s-acts div:first-child i{background:var(--primary);color:#fff;border-color:var(--primary);font-weight:700}
+.s-sheet{background:var(--surface);color:var(--ink);border-radius:16px;padding:6px 12px;font-size:13px;border:1px solid var(--line)}
+.s-row{display:flex;align-items:center;gap:8px;padding:8px 0;border-top:1px solid var(--line)}
 .s-row:first-of-type{border-top:0}
-.s-row i{width:28px;height:28px;border-radius:9px;background:linear-gradient(135deg,#7AA2FF,#3557C9);color:#fff;display:grid;place-items:center;font-style:normal;font-weight:600;font-size:10px}
-.s-row b{flex:1;font-size:12px}
+.s-row i{width:30px;height:30px;border-radius:50%;background:var(--soft);color:var(--primary);display:grid;place-items:center;font-style:normal;font-weight:700;font-size:11px}
+.s-row b{flex:1;font-size:13px}
 .s-row em{font-style:normal;font-weight:700}
-.s-row .r{background:var(--gold-grad);color:#08163A;border-radius:999px;padding:3px 9px;font-weight:700;font-size:10.5px;font-style:normal}
+.s-row .r{border:1.5px solid var(--primary);color:var(--primary);border-radius:999px;padding:2px 9px;font-weight:700;font-size:11.5px;font-style:normal}
 /* sections */
 section{padding:56px 0}
-h2{font-size:clamp(24px,4vw,34px);line-height:1.15;letter-spacing:-.01em;margin:0 0 10px;text-wrap:balance}
-.sub{color:var(--muted);max-width:640px;margin:0 0 30px;font-size:16px}
-.pain{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+h2{font-size:clamp(24px,4vw,34px);line-height:1.2;letter-spacing:-.01em;margin:0 0 10px;text-wrap:balance}
+.sub{color:var(--ink2);max-width:640px;margin:0 0 30px;font-size:17px}
+.pain{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 @media (max-width:860px){.pain{grid-template-columns:1fr}}
-.pain div{border-radius:20px;padding:18px}
-.pain b{display:block;font-size:16px;margin-bottom:4px}
-.pain p{margin:0;color:var(--muted);font-size:14.5px}
-.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pain div{border-radius:16px;padding:20px}
+.pain b{display:block;font-size:17px;margin-bottom:6px}
+.pain p{margin:0;color:var(--ink2);font-size:16px}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 @media (max-width:860px){.feat{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.feat{grid-template-columns:1fr}}
-.feat article{border-radius:22px;padding:20px}
-.ic{width:46px;height:46px;border-radius:15px;display:grid;place-items:center;background:rgba(255,255,255,.1);border:1px solid var(--line);margin-bottom:12px}
-.ic svg{width:22px;height:22px}
-.feat article:first-child .ic{background:var(--gold-grad);border-color:transparent;color:#08163A}
-.feat h3{margin:0 0 6px;font-size:16.5px}
-.feat p{margin:0;color:var(--muted);font-size:14.5px}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:s}
+.feat article{border-radius:16px;padding:20px}
+.ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--soft);color:var(--primary);margin-bottom:12px}
+.ic svg{width:24px;height:24px}
+.feat h3{margin:0 0 6px;font-size:18px}
+.feat p{margin:0;color:var(--ink2);font-size:16px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
 @media (max-width:860px){.steps{grid-template-columns:1fr}}
-.steps div{border-radius:22px;padding:20px;position:relative}
-.steps div::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--gold-grad);color:#08163A;font-weight:700;margin-bottom:12px}
-.steps b{display:block;font-size:16.5px;margin-bottom:4px}
-.steps p{margin:0;color:var(--muted);font-size:14.5px}
+.steps div{border-radius:16px;padding:20px;position:relative}
+.steps div::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--primary);color:#fff;font-weight:700;margin-bottom:12px}
+.steps b{display:block;font-size:18px;margin-bottom:4px}
+.steps p{margin:0;color:var(--ink2);font-size:16px}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
 @media (max-width:860px){.split{grid-template-columns:1fr}}
-.list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
-.list li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:#DCE5FB}
-.list li::before{content:"✓";flex:none;width:22px;height:22px;margin-top:1px;border-radius:50%;background:var(--gold-grad);color:#08163A;font-weight:700;font-size:12px;display:grid;place-items:center}
-.list li b{color:#fff}
-.receipt{border-radius:22px;padding:18px;background:#fff;color:#1a1424;max-width:360px;margin:0 auto;box-shadow:0 30px 60px rgba(2,8,30,.5);font-size:13.5px}
-.receipt h4{margin:0 0 10px;display:flex;justify-content:space-between;font-size:14px}
-.receipt h4 span{color:#1f8a4c;border:2px solid #1f8a4c;border-radius:8px;padding:0 8px;font-size:11px;transform:rotate(-6deg)}
+.list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px}
+.list li{display:flex;gap:12px;align-items:flex-start;font-size:16px;color:var(--ink2)}
+.list li::before{content:"✓";flex:none;width:24px;height:24px;margin-top:1px;border-radius:50%;background:var(--ok-bg);color:var(--ok);font-weight:700;font-size:13px;display:grid;place-items:center}
+.list li b{color:var(--ink)}
+.receipt{border-radius:16px;padding:20px;background:#fff;color:var(--ink);max-width:360px;margin:0 auto;border:1px solid var(--line);border-top:6px solid var(--primary);font-size:15px}
+.receipt h4{margin:0 0 12px;display:flex;justify-content:space-between;font-size:16px}
+.receipt h4 span{color:var(--ok);border:2px solid var(--ok);border-radius:8px;padding:0 8px;font-size:12px;transform:rotate(-6deg)}
 .receipt dl{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;margin:0}
-.receipt dt{color:#6b6178}.receipt dd{margin:0;text-align:right;font-weight:600}
-.receipt .amt{margin-top:12px;text-align:center;font-size:24px;font-weight:700;background:#F2F5FD;border-radius:12px;padding:8px}
-.faq{display:flex;flex-direction:column;gap:10px;max-width:800px}
-details{border-radius:18px;padding:16px 18px}
-summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
-summary::after{content:"+";color:var(--gold);font-size:20px;line-height:1}
+.receipt dt{color:var(--muted)}.receipt dd{margin:0;text-align:right;font-weight:600}
+.receipt .amt{margin-top:12px;text-align:center;font-size:26px;font-weight:700;background:var(--soft);color:var(--primary);border-radius:12px;padding:8px}
+.faq{display:flex;flex-direction:column;gap:12px;max-width:800px}
+details{border-radius:16px;padding:16px 18px}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px;font-size:17px;min-height:32px;align-items:center}
+summary::after{content:"+";color:var(--primary);font-size:24px;line-height:1}
 details[open] summary::after{content:"−"}
-details p{margin:10px 0 0;color:var(--muted);font-size:14.5px}
-.final{border-radius:28px;padding:34px 24px;text-align:center;background:linear-gradient(135deg,rgba(255,255,255,.2),rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.24)}
+details p{margin:10px 0 0;color:var(--ink2);font-size:16px}
+.final{border-radius:20px;padding:40px 24px;text-align:center;background:var(--primary);color:#fff}
+.final .sub{color:#fff;opacity:.95}
+.final .btn.gold{background:#fff;color:var(--primary)}
+.final .btn.ghost{background:transparent;border-color:#fff;color:#fff}
 .final .ctas{justify-content:center}
-footer{padding:30px 0 40px;color:var(--muted);font-size:13px;border-top:1px solid rgba(255,255,255,.08)}
+footer{padding:30px 0 40px;color:var(--muted);font-size:15px;border-top:1px solid var(--line);background:var(--surface)}
 footer .row{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
 footer nav{display:flex;flex-wrap:wrap;gap:16px}
-footer a{text-decoration:none}footer a:hover{color:#fff}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:8px}
+footer a{text-decoration:none}footer a:hover{color:var(--primary)}
+:focus-visible{outline:3px solid var(--primary);outline-offset:3px;border-radius:8px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -135,14 +141,13 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
     </div>
     <div class="phone" aria-label="Aperçu de l'application">
       <div class="screen">
-        <div class="s-head"><i>K</i><div><b>Jeunesse de Kansaghel</b><span style="color:#B8C7EE">Kansaghel · Labé</span></div></div>
-        <div class="s-card"><small>Solde de la caisse</small><div class="s-big">1 245 000 <span>FCFA</span></div><span class="s-pill">+125 000</span> <small>reçus ce mois-ci</small>
-          <svg viewBox="0 0 300 40" width="100%" height="34" aria-hidden="true"><path d="M0 32 C40 30 60 34 90 26 S140 12 170 20 S220 30 250 14 S285 6 300 8" fill="none" stroke="#F4C25B" stroke-width="2.4" stroke-linecap="round"/></svg></div>
+        <div class="s-head"><i>K</i><div><b>Jeunesse de Kansaghel</b><span>Kansaghel · Labé</span></div></div>
+        <div class="s-card"><small>Solde de la caisse</small><div class="s-big">1 245 000 <span>FCFA</span></div><span class="s-pill">+125 000</span> <small>reçus ce mois-ci</small></div>
         <div class="s-acts"><div><i>+</i>Encaisser</div><div><i>↗</i>Dépense</div><div><i>✉</i>Relancer</div><div><i>▤</i>Rapport</div></div>
         <div class="s-sheet">
-          <div class="s-row"><i>MB</i><b>Mamadou Bah</b><em style="color:#1E9A62">+5 000</em></div>
-          <div class="s-row"><i style="background:linear-gradient(135deg,#8EE0C1,#2E9F78)">IS</i><b>Ibrahima Sow</b><span class="r">Relancer</span></div>
-          <div class="s-row"><i style="background:linear-gradient(135deg,#FFC779,#E58A2E)">FD</i><b>Fatou Diallo</b><span class="r">Relancer</span></div>
+          <div class="s-row"><i>MB</i><b>Mamadou Bah</b><em style="color:var(--ok)">+5 000</em></div>
+          <div class="s-row"><i>IS</i><b>Ibrahima Sow</b><span class="r">Relancer</span></div>
+          <div class="s-row"><i>FD</i><b>Fatou Diallo</b><span class="r">Relancer</span></div>
         </div>
       </div>
     </div>
@@ -163,14 +168,14 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
     <p class="sub">Pensé avec une vraie association de village, pour des membres qui n'ont pas tous un ordinateur.</p>
     <div class="feat">
       <article class="glass"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div><h3>Cotisations en 3 secondes</h3><p>Le trésorier choisit le membre, le mois et le mode (Wave, Orange Money, espèces). Le montant dû est déjà rempli, même pour un apprenti qui paie moins qu'un gérant.</p></article>
-      <article class="glass"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M9 13h6M9 17h6"/></svg></div><h3>Reçu WhatsApp et PDF</h3><p>Chaque paiement donne un reçu numéroté à envoyer au membre en un clic. Plus de « j'ai payé » sans preuve.</p></article>
-      <article class="glass"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Transparence totale</h3><p>Tous les membres voient le solde, les entrées et les sorties. Une opération ne peut pas être effacée : une erreur se corrige par une contre-écriture visible de tous.</p></article>
-      <article class="glass"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg></div><h3>Relances automatiques</h3><p>Rappel sur le téléphone avant l'échéance, et message WhatsApp prêt à envoyer aux retardataires, avec le montant exact dû.</p></article>
-      <article class="glass"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></div><h3>Projets du village</h3><p>Forage, école, mosquée : chaque projet a sa barre de progression et une page publique à partager à la diaspora pour collecter les dons.</p></article>
-      <article class="glass"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-9-9.3C1.9 7.2 4.1 4 7.4 4c2 0 3.6 1.1 4.6 2.7C13 5.1 14.6 4 16.6 4c3.3 0 5.5 3.2 4.4 6.7C19.5 15.4 12 20 12 20z"/></svg></div><h3>Collectes de solidarité</h3><p>Décès, maladie, mariage : ouvrez une collecte en une minute, suivez chaque contribution et la remise à la famille.</p></article>
-      <article class="glass"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M4 13h16v7H4z"/><path d="M8 13V5h8v8"/></svg></div><h3>Dépenses validées à deux</h3><p>Le trésorier propose, le président approuve. Aucune sortie d'argent sans double accord, si vous le souhaitez.</p></article>
-      <article class="glass"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/></svg></div><h3>Sections de la diaspora</h3><p>Dakar, Conakry, France : chaque section a son trésorier, et le bureau voit qui est à jour partout.</p></article>
-      <article class="glass"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div><h3>Réunions, votes, documents</h3><p>Convocations, présence, comptes rendus, votes en ligne et statuts de l'association, au même endroit.</p></article>
+      <article class="glass"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M9 13h6M9 17h6"/></svg></div><h3>Reçu WhatsApp et PDF</h3><p>Chaque paiement donne un reçu numéroté à envoyer au membre en un clic. Plus de « j'ai payé » sans preuve.</p></article>
+      <article class="glass"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Transparence totale</h3><p>Tous les membres voient le solde, les entrées et les sorties. Une opération ne peut pas être effacée : une erreur se corrige par une contre-écriture visible de tous.</p></article>
+      <article class="glass"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg></div><h3>Relances automatiques</h3><p>Rappel sur le téléphone avant l'échéance, et message WhatsApp prêt à envoyer aux retardataires, avec le montant exact dû.</p></article>
+      <article class="glass"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></div><h3>Projets du village</h3><p>Forage, école, mosquée : chaque projet a sa barre de progression et une page publique à partager à la diaspora pour collecter les dons.</p></article>
+      <article class="glass"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-9-9.3C1.9 7.2 4.1 4 7.4 4c2 0 3.6 1.1 4.6 2.7C13 5.1 14.6 4 16.6 4c3.3 0 5.5 3.2 4.4 6.7C19.5 15.4 12 20 12 20z"/></svg></div><h3>Collectes de solidarité</h3><p>Décès, maladie, mariage : ouvrez une collecte en une minute, suivez chaque contribution et la remise à la famille.</p></article>
+      <article class="glass"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 13h16v7H4z"/><path d="M8 13V5h8v8"/></svg></div><h3>Dépenses validées à deux</h3><p>Le trésorier propose, le président approuve. Aucune sortie d'argent sans double accord, si vous le souhaitez.</p></article>
+      <article class="glass"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/></svg></div><h3>Sections de la diaspora</h3><p>Dakar, Conakry, France : chaque section a son trésorier, et le bureau voit qui est à jour partout.</p></article>
+      <article class="glass"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div><h3>Réunions, votes, documents</h3><p>Convocations, présence, comptes rendus, votes en ligne et statuts de l'association, au même endroit.</p></article>
     </div>
   </section>
 
